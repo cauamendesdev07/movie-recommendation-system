@@ -26,6 +26,22 @@ O projeto utiliza os arquivos `movies.csv` e `ratings.csv`.
 | Avaliações para teste | 20.168 |
 | Relações de similaridade calculadas | 483.197 |
 
+### Configuração das credenciais
+
+O projeto utiliza variáveis de ambiente para acessar o Neo4j, evitando armazenar a senha diretamente no código.
+
+No Windows (Prompt de Comando — CMD), configure as variáveis antes de executar os scripts:
+
+```cmd
+set NEO4J_URI=bolt://localhost:7687
+set NEO4J_USER=neo4j
+set NEO4J_PASSWORD=sua_senha_do_neo4j
+```
+
+Substitua `sua_senha_do_neo4j` pela senha configurada no seu banco.
+
+Essas variáveis ficam disponíveis somente na janela atual do terminal. Execute os comandos Python nessa mesma janela.
+
 ## 4. Modelo do grafo
 
 O banco utiliza os seguintes elementos:
